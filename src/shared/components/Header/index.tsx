@@ -46,19 +46,17 @@ export function Header() {
   }, []);
 
   return (
-    <header className="w-full h-16 flex justify-end items-center">
-      <nav className=" pr-16 mt-10">
+    <header className="w-full h-16 flex justify-end items-center bg-transparent">
+      <nav className=" mr-10 mt-1">
         {options.map(({ location, name }, index) => (
           <a
             key={index}
             href={location}
-            // className="text-white hover:text-secondary hover:underline px-4 py-2"
-            // className={`text-white hover:text-secondary hover:underline hover:underline-offset-8 px-4 py-2`}
             className={`${
               selectedOption === name
                 ? "text-secondary underline underline-offset-8"
                 : "text-white hover:text-secondary"
-            } px-4 py-2`}
+            } px-4 py-3 text-md`}
             onClick={() => handleSelectOption(name)}
           >
             {name}
