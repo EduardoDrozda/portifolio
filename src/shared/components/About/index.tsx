@@ -2,7 +2,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="w-full py-10 px-5 text-justify sm:px-28 bg-white"
+      className="w-full py-24 px-5 text-justify sm:px-28 bg-white"
     >
       <h1 className="text-secondary font-bold text-2xl text-center mb-10">
         Nice to meet you

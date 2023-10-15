@@ -20,10 +20,6 @@ export function Header() {
       location: "#about",
     },
     {
-      name: "Intro",
-      location: "#intro",
-    },
-    {
       name: "Career",
       location: "#career",
     },
