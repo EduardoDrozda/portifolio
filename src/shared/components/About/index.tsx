@@ -1,18 +1,16 @@
 import Image from "next/image";
 
 export function About() {
+
   return (
-    <section
-      id="about"
-      className="w-full py-10 px-5 text-justify bg-white"
-    >
+    <section id="about" className="w-full py-8 px-5 text-justify bg-white">
       <h1 className="text-secondary font-bold text-2xl text-center mb-10">
         Nice to meet you
       </h1>
       <div className="flex flex-col gap-y-10 w-full py-10 px-5 text-justify bg-white lg:px-72 lg:flex-row lg:gap-x-36">
-        <div className="w-full justify-center items-center lg:w-1/4 flex">
+        <div className="w-full flex-col justify-center items-center lg:w-1/4 flex">
           <Image
-            src="/images/me.jpeg"
+            src="/images/me2.jpeg"
             width={450}
             height={450}
             alt="Image of Eduardo Drozda"

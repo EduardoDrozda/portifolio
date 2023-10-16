@@ -4,58 +4,63 @@ import { useCallback, useState } from "react";
 
 type HeaderOptions = {
   name: string;
-  location: string;
+  id: string;
 };
 
 export function Header() {
-  const [selectedOption, setSelectedOption] = useState<string>("Home");
+  const [selectedOption, setSelectedOption] = useState<string>("");
 
   const options: HeaderOptions[] = [
     {
-      name: "Home",
-      location: "#",
-    },
-    {
       name: "About",
-      location: "#about",
-    },
-    {
-      name: "Career",
-      location: "#career",
+      id: "about",
     },
     {
       name: "Stacks",
-      location: "#stacks",
+      id: "stacks",
     },
     {
       name: "Projects",
-      location: "#my-projects",
+      id: "my-projects",
     },
     {
       name: "Contact",
-      location: "#contact",
+      id: "contact",
     },
   ];
 
-  const handleSelectOption = useCallback((v: string) => {
-    setSelectedOption(v);
+  const handleSelectOption = useCallback(({ id, name }: HeaderOptions) => {
+    scrollToView(id);
+    setSelectedOption(name);
   }, []);
+
+  function scrollToView(id: string) {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "nearest",
+    });
+  }
 
   return (
     <header className="w-full h-16 flex justify-end items-center bg-transparent">
       <nav className=" mr-10 mt-1">
-        {options.map(({ location, name }, index) => (
+        {options.map((option, index) => (
           <a
             key={index}
-            href={location}
+          
+            data-id={option.id}
             className={`${
-              selectedOption === name
-                ? "text-secondary underline underline-offset-8"
+              selectedOption === option.name
+                ? "text-secondary underline underline-offset-8 font-bold"
                 : "text-white hover:text-secondary"
-            } px-4 py-3 text-md`}
-            onClick={() => handleSelectOption(name)}
+            } px-4 py-3 text-md transition`}
+            onClick={() => handleSelectOption(option)}
           >
-            {name}
+            {option.name}
           </a>
         ))}
       </nav>

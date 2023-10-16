@@ -2,13 +2,15 @@
 
 import { LinkEnum } from "@shared/shared/enums";
 import Image from "next/image";
+import Link from "next/link";
 import { Header } from "..";
 
 type ExternalContent = {
   image: string;
   alt: string;
   link: LinkEnum;
-  isAnchor?: boolean;
+  isExternal?: boolean;
+  filename?: string;
 };
 
 export function Home() {
@@ -17,24 +19,23 @@ export function Home() {
       image: "/images/linkedin.png",
       link: LinkEnum.LINKEDIN,
       alt: "Github Icon to redirect github page",
-      isAnchor: true,
+      isExternal: true,
     },
     {
       image: "/images/github.png",
       link: LinkEnum.GITHUB,
       alt: "Linkedin Icon to redirect github page",
-      isAnchor: true,
+      isExternal: true,
     },
     {
       image: "/images/file.png",
-      link: LinkEnum.GITHUB,
       alt: "File Icon to to download cv",
+      link: LinkEnum.RESUME,
+      filename: "resume-EDUARDODROZDA.pdf",
     },
   ];
 
-  function handleExternalLink(link: string) {
-    window.open(link, "__blank");
-  }
+  function downloadFile(file: string) {}
 
   return (
     <section className="w-screen h-screen relative" id="#">
@@ -57,28 +58,34 @@ export function Home() {
               </span>
             </div>
             <div className="flex flex-1 gap-x-5">
-              {externalContents.map(({ image, link, alt, isAnchor }, index) =>
-                isAnchor ? (
-                  <a key={index} href={link} target="_blank">
-                    <Image
-                      src={image}
-                      width={30}
-                      height={30}
-                      alt={alt}
-                      className="cursor-pointer hover:scale-125 hover:opacity-70"
-                    />
-                  </a>
-                ) : (
-                  <Image
-                    src={image}
-                    width={30}
-                    height={30}
-                    alt={alt}
-                    className="cursor-pointer hover:scale-125 hover:opacity-70"
-                    onClick={() => handleExternalLink(link)}
-                    key={index}
-                  />
-                )
+              {externalContents.map(
+                ({ image, link, alt, isExternal, filename }, index) =>
+                  isExternal ? (
+                    <Link key={index} href={link} target="_blank">
+                      <Image
+                        src={image}
+                        width={30}
+                        height={30}
+                        alt={alt}
+                        className="cursor-pointer hover:scale-125 hover:opacity-70"
+                      />
+                    </Link>
+                  ) : (
+                    <Link
+                      key={index}
+                      href={link}
+                      download={filename}
+                      target="_blank"
+                    >
+                      <Image
+                        src={image}
+                        width={30}
+                        height={30}
+                        alt={alt}
+                        className="cursor-pointer hover:scale-125 hover:opacity-70"
+                      />
+                    </Link>
+                  )
               )}
             </div>
           </div>
