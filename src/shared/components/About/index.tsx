@@ -3,7 +3,7 @@ import Image from "next/image";
 export function About() {
 
   return (
-    <section id="about" className="w-full py-8 px-5 text-justify bg-white">
+    <section id="about" className="w-full pt-8 pb-[150px] px-5 text-justify bg-white">
       <h1 className="text-secondary font-bold text-2xl text-center mb-10">
         Nice to meet you
       </h1>

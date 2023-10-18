@@ -51,13 +51,12 @@ export function Header() {
         {options.map((option, index) => (
           <a
             key={index}
-          
             data-id={option.id}
             className={`${
               selectedOption === option.name
-                ? "text-secondary underline underline-offset-8 font-bold"
+                ? "text-secondary font-bold"
                 : "text-white hover:text-secondary"
-            } px-4 py-3 text-md transition`}
+            } px-4 py-3 text-md transition cursor-pointer`}
             onClick={() => handleSelectOption(option)}
           >
             {option.name}
