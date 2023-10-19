@@ -44,9 +44,8 @@ export function Home() {
         width={0}
         height={0}
       />
-      <div className="sm:block hidden">
-        <Header />
-      </div>
+      <Header />
+
       <div className="w-screen h-full flex flex-1 justify-center items-center">
         <div className=" flex flex-col">
           <div className="flex flex-col-reverse justify-center gap-3 items-center sm:flex-row sm:justify-start">
