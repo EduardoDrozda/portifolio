@@ -43,7 +43,7 @@ export function Header() {
 
   return (
     <header className="w-full h-16 flex justify-center items-center md:justify-end bg-transparent">
-      <nav className=" mr-10 mt-1">
+      <nav className=" mt-1">
         {options.map((option, index) => (
           <a
             key={index}
