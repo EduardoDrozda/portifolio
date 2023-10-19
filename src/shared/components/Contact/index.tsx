@@ -141,7 +141,7 @@ export function Contact() {
         <div className="mt-4 w-full flex justify-center items-center">
           <button
             type="submit"
-            className={`bg-primary text-white py-2 px-4 rounded-md w-1/4 hover:bg-primary_light active:bg-primary focus:outline-none`}
+            className={`bg-primary text-white py-2 px-4 rounded-md w-full md:w-1/4 hover:bg-primary_light active:bg-primary focus:outline-none`}
           >
             Enviar
           </button>

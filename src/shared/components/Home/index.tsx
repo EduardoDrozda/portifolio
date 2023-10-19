@@ -89,9 +89,9 @@ export function Home() {
               )}
             </div>
           </div>
-          <span className="text-5xl font-bold my-3 text-center">
+          <h1 className="text-5xl font-bold my-3 text-center">
             ENGENHEIRO DE SOFTWARE
-          </span>
+          </h1>
           <span className="text-md text-center sm:text-right">
             A SETE ANOS CONSTRUINDO SOLUÇÕES
           </span>

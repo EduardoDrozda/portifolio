@@ -12,7 +12,7 @@ export function About() {
       <div className="flex flex-col gap-y-10 w-full py-10 px-5 text-justify bg-white md:px-72 md:flex-row md:gap-x-36">
         <div className="w-full flex-col justify-center items-center md:w-1/4 flex">
           <Image
-            src="/images/me2.jpeg"
+            src="/images/me.jpeg"
             width={450}
             height={450}
             alt="Image of Eduardo Drozda"
