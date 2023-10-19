@@ -35,8 +35,6 @@ export function Home() {
     },
   ];
 
-  function downloadFile(file: string) {}
-
   return (
     <section className="w-screen h-screen relative" id="#">
       <Image
@@ -53,8 +51,8 @@ export function Home() {
         <div className=" flex flex-col">
           <div className="flex flex-col-reverse justify-center gap-3 items-center sm:flex-row sm:justify-start">
             <div className="flex items-center">
-              <span className="text-md text-left mr-3">
-                OlA 👋 EU SOU EDUARDO DROZDA
+              <span className="text-white text-md text-left mr-3">
+                OlÁ 👋 EU SOU EDUARDO DROZDA
               </span>
             </div>
             <div className="flex flex-1 gap-x-5">
@@ -89,10 +87,10 @@ export function Home() {
               )}
             </div>
           </div>
-          <h1 className="text-5xl font-bold my-3 text-center">
+          <h1 className="text-white text-5xl font-bold my-3 text-center">
             ENGENHEIRO DE SOFTWARE
           </h1>
-          <span className="text-md text-center sm:text-right">
+          <span className="text-white text-md text-center sm:text-right">
             A SETE ANOS CONSTRUINDO SOLUÇÕES
           </span>
         </div>
