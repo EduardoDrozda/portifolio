@@ -12,19 +12,15 @@ export function Header() {
 
   const options: HeaderOptions[] = [
     {
-      name: "About",
+      name: "Sobre mim",
       id: "about",
     },
     {
-      name: "Stacks",
+      name: "Skills",
       id: "stacks",
     },
     {
-      name: "Projects",
-      id: "my-projects",
-    },
-    {
-      name: "Contact",
+      name: "Contato",
       id: "contact",
     },
   ];

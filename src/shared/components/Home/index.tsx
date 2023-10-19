@@ -54,7 +54,7 @@ export function Home() {
           <div className="flex flex-col-reverse justify-center gap-3 items-center sm:flex-row sm:justify-start">
             <div className="flex items-center">
               <span className="text-md text-left mr-3">
-                HI 👋 I&apos;M EDUARDO DROZDA
+                OlA 👋 EU SOU EDUARDO DROZDA
               </span>
             </div>
             <div className="flex flex-1 gap-x-5">
@@ -89,11 +89,11 @@ export function Home() {
               )}
             </div>
           </div>
-          <span className="text-5xl font-bold mt-2 text-center">
-            SOFTWARE ENGINEER
+          <span className="text-5xl font-bold my-3 text-center">
+            ENGENHEIRO DE SOFTWARE
           </span>
           <span className="text-md text-center sm:text-right">
-            SEVEN YEARS BUILDING SOLUTIONS
+            A SETE ANOS CONSTRUINDO SOLUÇÕES
           </span>
         </div>
       </div>

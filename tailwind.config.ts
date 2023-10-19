@@ -17,6 +17,7 @@ const config: Config = {
       },
       colors: {
         primary: "#360083",
+        primary_light: '#492997',
         secondary: "#FF5733",
         background: '#EEEAF6'
       },

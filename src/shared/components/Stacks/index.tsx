@@ -10,7 +10,7 @@ export function Stacks() {
       },
       title: "Front-end",
       description:
-        "I value simple content structure, clean design patterns, and thoughtful interactions.",
+        "Desenvolvo interfaces web aderindo aos mais elevados padrões de qualidade e excelência na experiência do usuário.",
       languages: "HTML, Javascript, CSS, SASS",
       frameworks: "Angular, React, React Native",
     },
@@ -21,7 +21,7 @@ export function Stacks() {
       },
       title: "Back-end",
       description:
-        "I value simple content structure, clean design patterns, and thoughtful interactions.",
+        "Desenvolvo sistemas seguros e escaláveis, aderindo aos mais altos padrões de qualidade, incluindo clean code e design patterns, assegurando excelência técnica.",
       languages: "Javascript, PHP, C#",
       frameworks:
         "Node JS, Express, Nest JS, Laravel, .NET, MySQL, Postgres, Docker, Docker Compose",
@@ -33,15 +33,15 @@ export function Stacks() {
       },
       title: "Mobile",
       description:
-        "I value simple content structure, clean design patterns, and thoughtful interactions.",
+        "Crio interfaces móveis variadas, abrangendo desde aplicações simples até sistemas complexos, utilizando tecnologias avançadas.",
       languages: "Javascript",
-      frameworks: "NReact Native, Ionic",
+      frameworks: "React Native, Ionic",
     },
   ];
 
   return (
-    <section id="stacks" className="bg-primary w-full pb-16 px-36 lg:px-48">
-      <div className="w-full h-full grid gap-y-32 grid-rows-3 lg:grid-cols-3 lg:gap-x-4 lg:grid-rows-1">
+    <section id="stacks" className="bg-primary w-full pb-16 px-5 md:px-48">
+      <div className="w-full h-full grid gap-y-32 grid-rows-3 md:grid-cols-3 md:gap-x-4 md:grid-rows-1">
         {stacks.map(
           ({ image, title, description, languages, frameworks }, index) => (
             <StackCard
