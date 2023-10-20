@@ -9,8 +9,8 @@ export function About() {
       <h1 className="text-secondary font-bold text-2xl text-center mb-10">
         É um prazer te conhecer
       </h1>
-      <div className="flex flex-col gap-y-10 w-full py-10 px-5 text-justify bg-white md:px-72 md:flex-row md:gap-x-36">
-        <div className="w-full flex-col justify-center items-center md:w-1/4 flex">
+      <div className="flex flex-col gap-y-10 w-full py-10 px-5 text-justify bg-white lg:px-72 lg:flex-row lg:gap-x-36">
+        <div className="w-full flex-col justify-center items-center lg:w-1/4 flex">
           <Image
             src="/images/me.jpeg"
             width={450}
@@ -19,7 +19,7 @@ export function About() {
             className="rounded-full border-primary border-2"
           />
         </div>
-        <div className="w-full md:w-3/4">
+        <div className="w-full lg:w-3/4">
           <p className="w-full text-black text-md">
             Olá, meu nome é Eduardo Drozda, um engenheiro de software sênior com
             especialização em Javascript e uma paixão por aprimorar a

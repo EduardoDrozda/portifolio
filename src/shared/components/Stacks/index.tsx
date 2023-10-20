@@ -40,8 +40,8 @@ export function Stacks() {
   ];
 
   return (
-    <section id="stacks" className="bg-primary w-full pb-16 px-5 md:px-48">
-      <div className="w-full h-full grid gap-y-32 grid-rows-3 md:grid-cols-3 md:gap-x-4 md:grid-rows-1">
+    <section id="stacks" className="bg-primary w-full pb-16 px-5 lg:px-48">
+      <div className="w-full h-full grid gap-y-32 grid-rows-3 lg:grid-cols-3 lg:gap-x-4 lg:grid-rows-1">
         {stacks.map(
           ({ image, title, description, languages, frameworks }, index) => (
             <StackCard
