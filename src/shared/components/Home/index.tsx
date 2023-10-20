@@ -52,7 +52,7 @@ export function Home() {
           <div className="flex flex-col-reverse justify-center gap-3 items-center sm:flex-row sm:justify-start">
             <div className="flex items-center">
               <span className="text-white text-md text-left mr-3">
-                OlÁ 👋 EU SOU EDUARDO DROZDA
+                OLÁ 👋 EU SOU EDUARDO DROZDA
               </span>
             </div>
             <div className="flex flex-1 gap-x-5">
@@ -91,7 +91,7 @@ export function Home() {
             ENGENHEIRO DE SOFTWARE
           </h1>
           <span className="text-white text-md text-center sm:text-right">
-            A SETE ANOS CONSTRUINDO SOLUÇÕES
+            HÁ SETE ANOS CONSTRUINDO SOLUÇÕES
           </span>
         </div>
       </div>
