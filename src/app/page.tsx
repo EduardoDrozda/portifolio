@@ -1,19 +1,12 @@
-import {
-  About,
-  Contact,
-  Home as HomeSection,
-  Stacks,
-} from "@shared/shared/components";
-import { Footer } from "@shared/shared/components/Footer";
+"use client";
+
+import { EmailContextProvider } from "@shared/context";
+import { HomePage } from "@shared/pages";
 
 export default function Home() {
   return (
-    <>
-      <HomeSection />
-      <About />
-      <Stacks />
-      <Contact />
-      <Footer />
-    </>
+    <EmailContextProvider>
+      <HomePage />
+    </EmailContextProvider>
   );
 }

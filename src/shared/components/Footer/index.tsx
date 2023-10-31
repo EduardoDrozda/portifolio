@@ -5,7 +5,9 @@ export function Footer() {
         &quot;É fácil evitar erros; basta não fazer nada. <br /> Mas isso seria
         o maior erro de todos.&quot; - Dan Tocchini
       </h1>
-      <span className="mt-4 text-center text-sm text-white font-light">Eduardo Drozda @ 2023</span>
+      <span className="mt-4 text-center text-sm text-white font-light">
+        Copyright &copy; {new Date().getFullYear()} Eduardo Drozda
+      </span>
     </footer>
   );
 }

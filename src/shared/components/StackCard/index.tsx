@@ -1,4 +1,4 @@
-import { Stack } from "@shared/shared/types";
+import { Stack } from "@shared/types";
 import Image from "next/image";
 
 type Props = Stack;

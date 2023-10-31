@@ -1,6 +1,6 @@
 "use client";
 
-import { LinkEnum } from "@shared/shared/enums";
+import { LinkEnum } from "@shared/enums";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "..";
