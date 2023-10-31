@@ -1,7 +1,8 @@
 import { Email } from "@shared/types";
 
+const URL = process.env.NEXT_PUBLIC_API_ENDPOINT || "";
+
 export async function sendEmail(data: Email) {
-  const url = process.env.NEXT_PUBLIC_API_ENDPOINT || "";
   const options = {
     method: "POST",
     headers: {
@@ -10,5 +11,6 @@ export async function sendEmail(data: Email) {
     body: JSON.stringify(data),
   };
 
-  await fetch(`${url}/email`, options);
+  console.log(URL);
+  await fetch(`${URL}/email`, options);
 }
