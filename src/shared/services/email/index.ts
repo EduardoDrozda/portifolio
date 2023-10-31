@@ -1,8 +1,7 @@
 import { Email } from "@shared/types";
 
-
 export async function sendEmail(data: Email) {
-  const url = process.env.NEXT_PUBLIC_API_ENDPOINT!;
+  const url = process.env.NEXT_PUBLIC_API_ENDPOINT || "";
   const options = {
     method: "POST",
     headers: {
