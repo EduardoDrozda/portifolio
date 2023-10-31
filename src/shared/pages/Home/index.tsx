@@ -5,6 +5,9 @@ import { useEmail } from "@shared/context";
 import { Email } from "@shared/types";
 import { useCallback } from "react";
 
+
+import "react-toastify/dist/ReactToastify.css";
+
 export function HomePage() {
   const { isLoading, handleSendEmail } = useEmail();
 

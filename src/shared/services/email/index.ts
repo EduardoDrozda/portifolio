@@ -11,6 +11,5 @@ export async function sendEmail(data: Email) {
     body: JSON.stringify(data),
   };
 
-  console.log(URL);
   await fetch(`${URL}/email`, options);
 }

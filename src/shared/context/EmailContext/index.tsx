@@ -8,6 +8,8 @@ import {
   useState,
 } from "react";
 
+import { ToastContainer, toast } from "react-toastify";
+
 type EmailContext = {
   isLoading: boolean;
   handleSendEmail: (email: Email) => Promise<void>;
@@ -27,14 +29,35 @@ const EmailContextProvider: React.FC<Props> = ({ children }: Props) => {
   const [isLoading, setIsLoading] = useState<boolean>(DEFAULT_VALUE.isLoading);
 
   const handleSendEmail = useCallback(async (data: Email) => {
-    try {
-      setIsLoading(true);
-      await sendEmail(data);
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setIsLoading(false);
-    }
+    setIsLoading(true);
+    await sendEmail(data)
+      .then(() => {
+        toast.success("Email enviado com sucesso", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      })
+      .catch(() => {
+        toast.error("Houve um erro ao enviar o e-mail, tente novamente", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -45,6 +68,7 @@ const EmailContextProvider: React.FC<Props> = ({ children }: Props) => {
       }}
     >
       {children}
+      <ToastContainer />
     </EmailContext.Provider>
   );
 };

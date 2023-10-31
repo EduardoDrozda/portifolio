@@ -3,14 +3,15 @@
 import { Email } from "@shared/types";
 import { Controller, useForm } from "react-hook-form";
 import { Input } from "..";
+import { Button } from "../Button";
 
 type Props = {
   isLoading: boolean;
-  handleSendEmail: (v: Email) => void;
+  handleSendEmail: (v: Email) => Promise<void>;
 };
 
 export function Contact({ isLoading, handleSendEmail }: Props) {
-  const { control, handleSubmit } = useForm<Email>({
+  const { control, handleSubmit, formState } = useForm<Email>({
     defaultValues: {
       name: "",
       email: "",
@@ -25,9 +26,9 @@ export function Contact({ isLoading, handleSendEmail }: Props) {
   };
 
   return (
-    <section id="contact" className="w-full bg-white py-10 px-5 md:px-40">
+    <section id="contact" className="w-full bg-white py-10 px-5 md:px-48">
       <div className=" bg-background rounded-md shadow-md drop-shadow-sm md:flex p-10">
-        <div className="w-full md:w-1/2 md:border-r-primary md:border-x-[0.5px] md:pr-5">
+        <div className="w-full">
           <h1 className="text-secondary font-bold text-2xl text-center">
             Fale comigo
           </h1>
@@ -160,12 +161,9 @@ export function Contact({ isLoading, handleSendEmail }: Props) {
               )}
             />
             <div className="mt-4 w-full flex justify-center items-center">
-              <button
-                type="submit"
-                className={`bg-primary text-white py-2 px-4 rounded-md w-full md:w-1/4 hover:bg-primary_light active:bg-primary focus:outline-none`}
-              >
+              <Button type="submit" isLoading={isLoading}>
                 Enviar
-              </button>
+              </Button>
             </div>
           </form>
         </div>
