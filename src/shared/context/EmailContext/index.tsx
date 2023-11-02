@@ -32,7 +32,7 @@ const EmailContextProvider: React.FC<Props> = ({ children }: Props) => {
     setIsLoading(true);
     await sendEmail(data)
       .then(() => {
-        toast.success("Email enviado com sucesso", {
+        toast.success("Email enviado com sucesso, em breve entraremos em contato", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
