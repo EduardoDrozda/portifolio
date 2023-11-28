@@ -1,32 +1,53 @@
-import { InputHTMLAttributes } from "react";
+import React, { InputHTMLAttributes, LegacyRef, forwardRef } from "react";
 
 type Props = {
-  label: string;
   textarea?: boolean;
   invalid?: boolean;
 } & InputHTMLAttributes<HTMLInputElement> &
   InputHTMLAttributes<HTMLTextAreaElement>;
 
-export function Input({ label, textarea, invalid, ...rest }: Props) {
-  const className = `border border-gray-300 ${
-    invalid
-      ? "border-red-500"
-      : "focus:border-secondary"
-  } rounded-md px-4 py-2 w-full focus:outline-none text-sm text-gray-700`;
+type Ref = LegacyRef<HTMLInputElement> | LegacyRef<HTMLTextAreaElement>;
 
-  return (
-    <div
-      className="w-full h-full flex flex-col gap-y-2
-    "
-    >
-      <label className=" text-gray-700 text-sm font-bold" htmlFor="input">
-        {label}
-      </label>
-      {textarea ? (
-        <textarea className={className} {...rest} />
-      ) : (
-        <input className={className} {...rest} />
-      )}
-    </div>
-  );
-}
+const Input = forwardRef<Ref, Props>(
+  ({ label, textarea, invalid, ...rest }, ref) => {
+    const [focused, setFocused] = React.useState(false);
+
+    const handleFocus = () => {
+      setFocused(true);
+    };
+
+    const handleBlur = () => {
+      setFocused(false);
+    };
+
+    const className = `w-full border rounded-md py-2 px-3 focus:outline-none focus:border-purple-500 transition-all duration-300 ${
+      focused ? "border-purple-500" : "border-gray-300"
+    }`;
+
+    return (
+      <div className="w-full h-full flex flex-col gap-y-2">
+        {textarea ? (
+          <textarea
+            className={className}
+            {...rest}
+            ref={ref as LegacyRef<HTMLTextAreaElement>}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+          />
+        ) : (
+          <input
+            className={className}
+            {...rest}
+            ref={ref as LegacyRef<HTMLInputElement>}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+          />
+        )}
+      </div>
+    );
+  }
+);
+
+Input.displayName = "Input";
+
+export { Input };

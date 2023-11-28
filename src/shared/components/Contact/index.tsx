@@ -54,8 +54,7 @@ export function Contact({ isLoading, handleSendEmail }: Props) {
                 render={({ field, fieldState: { invalid, error } }) => (
                   <div className="w-full flex flex-col gap-y-2">
                     <Input
-                      label="Nome"
-                      placeholder="Digite aqui"
+                      placeholder="Nome"
                       type="text"
                       invalid={invalid}
                       {...field}
@@ -84,8 +83,7 @@ export function Contact({ isLoading, handleSendEmail }: Props) {
                 render={({ field, fieldState: { invalid, error } }) => (
                   <div className="w-full flex flex-col gap-y-2">
                     <Input
-                      label="Email"
-                      placeholder="Digite aqui"
+                      placeholder="Email"
                       type="text"
                       invalid={invalid}
                       {...field}
@@ -110,8 +108,7 @@ export function Contact({ isLoading, handleSendEmail }: Props) {
                 render={({ field, fieldState: { invalid, error } }) => (
                   <div className="w-full flex flex-col gap-y-2">
                     <Input
-                      label="Telefone"
-                      placeholder="(__)_________"
+                      placeholder="Telefone"
                       type="text"
                       invalid={invalid}
                       {...field}
@@ -135,8 +132,7 @@ export function Contact({ isLoading, handleSendEmail }: Props) {
                 render={({ field, fieldState: { invalid, error } }) => (
                   <div className="w-full flex flex-col gap-y-2">
                     <Input
-                      label="Assunto"
-                      placeholder="Digite aqui"
+                      placeholder="Assunto"
                       type="text"
                       invalid={invalid}
                       {...field}
@@ -152,12 +148,7 @@ export function Contact({ isLoading, handleSendEmail }: Props) {
               name="message"
               control={control}
               render={({ field }) => (
-                <Input
-                  label="Mensagem"
-                  placeholder="Digite um breve texto aqui"
-                  textarea
-                  {...field}
-                />
+                <Input placeholder="Mensagem" textarea {...field} />
               )}
             />
             <div className="mt-4 w-full flex justify-center items-center">
