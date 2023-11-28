@@ -9,7 +9,7 @@ type Props = {
 type Ref = LegacyRef<HTMLInputElement> | LegacyRef<HTMLTextAreaElement>;
 
 const Input = forwardRef<Ref, Props>(
-  ({ label, textarea, invalid, ...rest }, ref) => {
+  ({ textarea, invalid, ...rest }, ref) => {
     const [focused, setFocused] = React.useState(false);
 
     const handleFocus = () => {
@@ -20,8 +20,8 @@ const Input = forwardRef<Ref, Props>(
       setFocused(false);
     };
 
-    const className = `w-full border rounded-md py-2 px-3 focus:outline-none focus:border-purple-500 transition-all duration-300 ${
-      focused ? "border-purple-500" : "border-gray-300"
+    const className = `w-full border rounded-md py-2 px-3 focus:outline-none focus:border-primary transition-all duration-300 ${
+      focused ? "border-primary" : "border-gray-300"
     }`;
 
     return (
